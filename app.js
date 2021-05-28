@@ -40,13 +40,12 @@ app.post("/", (req, res) =>{
     let actualResult = a+b;
     let input = req.body.answer;
     let message;
-
     if(input == actualResult){
        message = true;
     } else{
         message = false;
     }
-
+    
     res.send(JSON.stringify({
       correct: message
   }));
